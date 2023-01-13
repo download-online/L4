@@ -8,18 +8,21 @@ public class NamedAmountable extends Named{
     public NamedAmountable(String name){
         super(name);
         this.amount = Amount.SINGLE;
-        setCollapsedName("он");
     }
     public NamedAmountable(String name, Amount amount) {
         super(name);
         this.amount = amount;
-        setCollapsedName((this.amount == Amount.SINGLE) ? "он" : "они");
+        setPronoun((this.amount == Amount.SINGLE) ? Pronoun.HE : Pronoun.THEY);
     }
 
     public Amount getAmount(){
         return amount;
     }
 
+    @Override
+    public String getDefinition() {
+        return "исчисляемое";
+    }
     @Override
     public boolean equals(Object otherObject) {
         if (this == otherObject) {

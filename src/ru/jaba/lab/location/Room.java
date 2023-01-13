@@ -1,10 +1,12 @@
 package ru.jaba.lab.location;
 
-import ru.jaba.lab.*;
+import ru.jaba.lab.PhysicalObject;
+import ru.jaba.lab.Process;
+import ru.jaba.lab.Visitable;
 
-public class Room extends Circumstances implements Visitable {
-    public Room() {
-        super("комната");
+public class Room extends PhysicalObject implements Visitable {
+    public Room(String name) {
+        super(name);
     }
     @Override
     public String isDirection() {

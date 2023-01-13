@@ -1,10 +1,11 @@
 package ru.jaba.lab.location;
 
-import ru.jaba.lab.Circumstances;
+import ru.jaba.lab.PhysicalObject;
+import ru.jaba.lab.Process;
 
-public class Table extends Circumstances {
-    public Table(){
-        super("стол");
+public class Table extends PhysicalObject {
+    public Table(String name){
+        super(name);
     }
     @Override
     public String isDirection() {

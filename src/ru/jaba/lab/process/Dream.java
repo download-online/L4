@@ -1,11 +1,11 @@
 package ru.jaba.lab.process;
 
-import ru.jaba.lab.*;
+import ru.jaba.lab.Process;
 
-public class Dream extends Circumstances {
+public class Dream extends Process {
 
-    public Dream(){
-        super("сон");
+    public Dream(String name){
+        super(name);
     }
     @Override
     public String isDirection() {

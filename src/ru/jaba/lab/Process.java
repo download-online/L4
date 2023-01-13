@@ -1,11 +1,10 @@
 package ru.jaba.lab;
 
-abstract public class Circumstances extends Named{
+abstract public class Process extends Named implements Visitable {
 
-    public Circumstances(String name){
+    public Process(String name){
         super(name);
     }
     abstract public String isDirection();
     abstract public String isLocation();
-
 }

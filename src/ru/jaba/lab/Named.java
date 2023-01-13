@@ -4,19 +4,33 @@ import java.util.Objects;
 
 public class Named {
     private final String name;
-    private String nameCollapsed;
+    private Pronoun pronoun;
+    private Adjective adjective = Adjective.NORMAL;
+
+    {
+        pronoun = Pronoun.HE;
+    }
 
     public Named(String name){
         this.name = name;
-        this.nameCollapsed = name;
     }
 
     public String getName(){
         return name;
     }
-    public String getCollapsedName() {return nameCollapsed;}
+    public Pronoun getPronoun() {return pronoun;}
+    public String getCollapsedName() {return pronoun.getNominative();}
 
-    public void setCollapsedName(String nameCollapsed){ this.nameCollapsed = nameCollapsed;}
+
+    public void setPronoun(Pronoun pronoun){ this.pronoun = pronoun;}
+    public void setAdjective(Adjective adjective) {this.adjective = adjective;}
+
+    public Action define() {
+        return new Action(this,"— это "+adjective+" "+getDefinition(), ActionType.DEFINE);
+    }
+
+    public String getDefinition() {return "понятие";}
+    public Adjective getAdjective() {return adjective;}
 
     @Override
     public String toString() {

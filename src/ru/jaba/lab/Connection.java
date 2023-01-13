@@ -4,7 +4,17 @@ public enum Connection {
     AND("и "),
     A("а "),
     A_WHEN("а когда "),
-    NIHIL("");
+    THERE_WHEN("вот когда "),
+    NOTHING(""),
+    THAT("что "),
+    IF("если "),
+    THEN("то "),
+    TO("чтоб "),
+    HOW("как "),
+    DASH("— "),
+    BECAUSE("ведь ")
+    ;
+
 
     private final String text;
 
